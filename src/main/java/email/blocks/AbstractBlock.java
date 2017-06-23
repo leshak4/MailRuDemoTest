@@ -1,7 +1,20 @@
 package email.blocks;
 
-/**
- * Created by Aleksei_Abramenko on 11/3/2016.
- */
-public class AbstractBlock {
+import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.htmlelements.element.HtmlElement;
+
+public abstract class AbstractBlock extends HtmlElement {
+
+    private int DEFAULT_TIMEOUT = 10;
+
+    public boolean isElementPresent(WebElement element) {
+        if (element.isDisplayed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
 }

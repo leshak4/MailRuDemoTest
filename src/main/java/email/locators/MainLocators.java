@@ -2,12 +2,8 @@ package email.locators;
 
 public class MainLocators {
 
-    public static final String USERNAME_TXT = "mailbox__login";
+    public static final String MAIN_BREADCRUMBS_POST_LINK = "//a[@id='ph_mail']/span";
 
-    public static final String PASSWORD_TXT = "mailbox__password";
-
-    public static final String DOMAIN_DD = "mailbox__login__domain";
-
-    public static final String SIGNIN_BTN = "mailbox__auth__button";
+    public static final String MAIN_SEARCH_LINE_INPUT = "//input[@id='q']";
 
 }

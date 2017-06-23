@@ -80,8 +80,13 @@
         </dependency>
         <dependency>
             <groupId>ru.yandex.qatools.htmlelements</groupId>
-            <artifactId>htmlelements-all</artifactId>
-            <version>1.17</version>
+            <artifactId>htmlelements-java</artifactId>
+            <version>1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.yandex.qatools.htmlelements</groupId>
+            <artifactId>htmlelements-matchers</artifactId>
+            <version>1.8</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -108,6 +113,11 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.13.6</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
     </dependencies>
 </project>

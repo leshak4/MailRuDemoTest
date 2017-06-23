@@ -1,7 +1,7 @@
 package email.cases;
 
 import email.pages.MainPage;
-import email.pages.OpenSignIn;
+import email.pages.OpenMainPage;
 import email.utils.SettingsProperties;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -12,18 +12,14 @@ import org.testng.annotations.BeforeMethod;
 public abstract class AbstractTest {
 
     protected WebDriver driver;
-
     private final Logger log = Logger.getLogger(this.getClass());
-
-    private MainPage signIn;
-    private OpenSignIn openSignIn;
 
     @BeforeMethod
     public void setUp() throws Exception {
         log.info("setting GoogleChrome as a working browser");
         System.setProperty("webdriver.chrome.driver", SettingsProperties.getProperty("pathToChromeDriver"));
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
     }
 
@@ -34,10 +30,9 @@ public abstract class AbstractTest {
         }
     }
 
-    public MainPage openSignIn() {
-        openSignIn = new OpenSignIn(driver);
-        signIn = openSignIn.openSignInPage();
-        return signIn;
+    public MainPage openMainPage() {
+        OpenMainPage openMainPage = new OpenMainPage(driver);
+        return openMainPage.openMainPage();
     }
 
     public void logTestHeader(final String text) {

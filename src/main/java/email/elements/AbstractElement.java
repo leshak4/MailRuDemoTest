@@ -1,7 +1,12 @@
 package email.elements;
 
-/**
- * Created by Aleksei_Abramenko on 11/3/2016.
- */
-public class AbstractElement {
+import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
+
+public class AbstractElement extends TypifiedElement {
+
+    public AbstractElement(final WebElement element) {
+        super(element);
+    }
+
 }

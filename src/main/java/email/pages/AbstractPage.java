@@ -1,11 +1,14 @@
 package email.pages;
 
+import email.locators.MainLocators;
+import email.utils.SettingsProperties;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.allure.annotations.Step;
+import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
 
 import java.util.List;
 
@@ -20,13 +23,20 @@ public abstract class AbstractPage {
     private static final int DEFAULT_TIMEOUT = 10;
 
     public AbstractPage(final WebDriver driver) {
+        HtmlElementLoader.populatePageObject(this, driver);
         this.driver = driver;
+    }
+
+    public MainPage openMainPage() {
+        getDriver().get(SettingsProperties.getProperty("signIn_URL"));
+        waitForPageToLoadAndVerifyBy(By.xpath(MainLocators.MAIN_SEARCH_LINE_INPUT));
+        return new MainPage(getDriver());
     }
 
     // ***** Waits and sleep ***** //
 
     public void waitUntilDisplayed(final WebElement element) {
-        waitUntilDisplayed(element, 120);
+        waitUntilDisplayed(element, 60);
     }
 
     public void waitUntilDisplayed(final WebElement element, final Integer timeout) {
@@ -48,7 +58,7 @@ public abstract class AbstractPage {
                     });
         } catch (final TimeoutException e) {
             if (isLog) {
-                log.error("Element is not displayed, but expected!", e);
+                log.error("Element is not displayed, but expected", e);
             }
             throw e;
         }
@@ -183,13 +193,13 @@ public abstract class AbstractPage {
 
     @Step
     public boolean waitForPageToLoadAndVerifyWe(final WebElement pageIdentifier) {
-        final String pageName = this.getClass().getName().replace("email.pages.", "").replace("Page", "");
+        final String pageName = this.getClass().getName().replace("Page", "");
         log.info("Waiting for " + pageName + " page to load");
         if (isElementPresent(pageIdentifier, DEFAULT_TIMEOUT)) {
             log.info(pageName + " page is opened.");
             return true;
         } else {
-            log.error("This is not " + pageName + " page. Something went wrong.");
+            log.error("This is not " + pageName + " page. Something is wrong.");
             return false;
         }
     }
