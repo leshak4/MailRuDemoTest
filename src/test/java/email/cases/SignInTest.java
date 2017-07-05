@@ -1,11 +1,9 @@
 package email.cases;
 
+import email.data.TestDataProvider;
+import email.data.UserCreds;
 import email.data.Users;
-import email.pages.LandingPage;
-import email.pages.MainPage;
-import email.pages.SignInPromoPage;
-import email.pages.SignInSimplePage;
-import email.utils.Utils;
+import email.pages.*;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
@@ -17,19 +15,19 @@ public class SignInTest extends AbstractTest{
 
     private final Logger log = Logger.getLogger(this.getClass());
 
-    @Test(groups = { "signIn", "positive" } )
-    public void successfulSignIn() {
-        logTestHeader("Test: successful sign in");
-        log.info("TC-P01: SignIn page: Logic: valid login and password");
+    @Test(groups = { "signIn", "positive" },
+            dataProvider = "getActiveUser",
+            dataProviderClass = TestDataProvider.class)
+    public void successfulSignIn(Users user) {
+        logTestHeader("TC-P01: SignIn page: Valid login and password");
 
-        Users user = Users.MAIL_USER_1;
         MainPage mainPage = openMainPage();
-        SignInPromoPage signInPromoPage = mainPage.openSignInPage();
-        LandingPage landing = signInPromoPage.correctSignInPromo(user);
+        SignInPage signInPage = mainPage.openSignInPage();
+        MailBoxPage landing = signInPage.signIn(user);
 
-        String expectedEmail = Utils.generateEmailString(user);
-        String descr = "Correct email [" + expectedEmail + "] is displayed on the landing page";
-        log.info("Check " + descr);
+        String expectedEmail = generateEmailString(user);
+        String descr = "Email of a logged user [" + expectedEmail + "]";
+        log.info("Check " + descr + " is displayed");
         assertThat(descr,
                 landing.getLoggedEmailText(),
                 equalToIgnoringCase(expectedEmail));
@@ -38,16 +36,28 @@ public class SignInTest extends AbstractTest{
 
     @Test(groups = { "signIn", "negative" } )
     public void tryToSignInWithWrongPassword() {
-        logTestHeader("Test: try to sign in with wrong password");
-        log.info("TC-N01: SignIn page: Logic: invalid password");
+        logTestHeader("TC-N01: SignIn page: Invalid password");
 
-        Users user = Users.MAIL_USER_WRONG_PSW;
+        Users user = Users.getWrongUser();
         MainPage mainPage = openMainPage();
-        SignInSimplePage signInSimplePage = mainPage.openSignInPage().wrongSignInPromo(user);
+        SignInSimplePage signInSimplePage = mainPage.openSignInPage().wrongSignIn(user);
 
         String descr = "Error message about wrong username/password";
-        log.info("Check " + descr);
+        log.info("Check " + descr + " is displayed");
         assertTrue(descr, signInSimplePage.isWrongCredMsgDisplayed());
         log.info("--PASSED--");
     }
+
+    @Test(groups = { "Registration", "positive" }, enabled = false)
+    public void Registration() {
+        logTestHeader("TC-P02: Registration page: new user successful registration");
+
+        Users newUser = Users.getDynUser();
+        String[] userDetails = UserCreds.MAIL_USER_DETAILS;
+
+        MainPage mainPage = openMainPage();
+        RegPage regPage = mainPage.openRegPage();
+        regPage.fillRegistrationForm(newUser, userDetails);
+    }
+
 }

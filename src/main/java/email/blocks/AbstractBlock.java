@@ -1,11 +1,10 @@
 package email.blocks;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 
 public abstract class AbstractBlock extends HtmlElement {
-
-    private int DEFAULT_TIMEOUT = 10;
 
     public boolean isElementPresent(WebElement element) {
         if (element.isDisplayed()) {
@@ -15,6 +14,9 @@ public abstract class AbstractBlock extends HtmlElement {
         }
     }
 
+    public WebElement findByXpath(final String selector) {
+        return getWrappedElement().findElement(By.xpath(selector));
+    }
 
 
 }

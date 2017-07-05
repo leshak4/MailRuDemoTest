@@ -216,14 +216,12 @@ public abstract class AbstractPage {
         getDriver().switchTo().defaultContent();
     }
 
-    //experimental
     public void waitForFrameAndSwitch(final String frameId) {
-        (new WebDriverWait(driver, 60)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameId));
+        (new WebDriverWait(driver, 20)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameId));
     }
 
-    //experimental
     private void waitForFrameAndSwitch(final WebElement frame) {
-        (new WebDriverWait(driver, 60)).until(new ExpectedCondition<WebDriver>() {
+        (new WebDriverWait(driver, 20)).until(new ExpectedCondition<WebDriver>() {
             @Override
             public WebDriver apply(final WebDriver driver) {
                 try {
@@ -237,8 +235,7 @@ public abstract class AbstractPage {
         });
     }
 
-    public void waitForFrameLoaded(final WebElement frame) {
-        waitForFrameAndSwitch(frame);
+    public void switchFromFrameToDefault() {
         getDriver().switchTo().defaultContent();
 
     }

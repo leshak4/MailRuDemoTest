@@ -2,41 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dff72ff0-c655-47b9-8abe-0477577f6b4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/CommonLocators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/SignInPromoLocators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/SignInSimpleLocators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/pages/SignInPromoPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/pages/SignInSimplePage.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/email/locators/AuthorizationLocators.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/email/pages/AuthorizationPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/locators/AuthorizationLocators.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/pages/AuthorizationPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/pages/OpenSignIn.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/email/pages/OpenSignIn.java" afterPath="$PROJECT_DIR$/src/main/java/email/pages/OpenMainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/locators/LandingLocators.class" afterPath="$PROJECT_DIR$/target/classes/email/locators/LandingLocators.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/blocks/MailHomePaneBlock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/data/EmailDetails.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/data/TestDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/data/UserCreds.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/CreateEmailFormPageLocators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/EmailSentLocators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/MailHomePaneBlockLocators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/RegLocators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/locators/SentEmailFormPageLocators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/pages/CreateEmailFormPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/pages/EmailSentPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/pages/RegPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/email/pages/SentEmailFormPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/email/cases/EmailTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/locators/LandingLocators.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/locators/SignInPromoLocators.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/pages/LandingPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/email/pages/SignInPromoPage.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/email/locators/LandingLocators.java" afterPath="$PROJECT_DIR$/src/main/java/email/locators/MailBoxLocators.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/email/locators/SignInPromoLocators.java" afterPath="$PROJECT_DIR$/src/main/java/email/locators/SignInLocators.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/email/pages/LandingPage.java" afterPath="$PROJECT_DIR$/src/main/java/email/pages/MailBoxPage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/email/pages/SignInPromoPage.java" afterPath="$PROJECT_DIR$/src/main/java/email/pages/SignInPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/blocks/AbstractBlock.class" afterPath="$PROJECT_DIR$/target/classes/email/blocks/AbstractBlock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/blocks/SignInBlock.class" afterPath="$PROJECT_DIR$/target/classes/email/blocks/SignInBlock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/data/Users.class" afterPath="$PROJECT_DIR$/target/classes/email/data/Users.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/locators/CommonLocators.class" afterPath="$PROJECT_DIR$/target/classes/email/locators/CommonLocators.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/locators/MainLocators.class" afterPath="$PROJECT_DIR$/target/classes/email/locators/MainLocators.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage$1.class" afterPath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage$2.class" afterPath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/locators/SignInBlockLocators.class" afterPath="$PROJECT_DIR$/target/classes/email/locators/SignInBlockLocators.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage$3.class" afterPath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage.class" afterPath="$PROJECT_DIR$/target/classes/email/pages/AbstractPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/pages/LandingPage.class" afterPath="$PROJECT_DIR$/target/classes/email/pages/LandingPage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/pages/MainPage.class" afterPath="$PROJECT_DIR$/target/classes/email/pages/MainPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/email/utils/Utils.class" afterPath="$PROJECT_DIR$/target/classes/email/utils/Utils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/email/cases/AbstractTest.class" afterPath="$PROJECT_DIR$/target/test-classes/email/cases/AbstractTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/email/cases/SignInTest.class" afterPath="$PROJECT_DIR$/target/test-classes/email/cases/SignInTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MailRu.iml" afterPath="$PROJECT_DIR$/MailRu.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java" afterPath="$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/elements/AbstractElement.java" afterPath="$PROJECT_DIR$/src/main/java/email/elements/AbstractElement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/locators/LandingLocators.java" afterPath="$PROJECT_DIR$/src/main/java/email/locators/LandingLocators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java" afterPath="$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/data/Users.java" afterPath="$PROJECT_DIR$/src/main/java/email/data/Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/locators/CommonLocators.java" afterPath="$PROJECT_DIR$/src/main/java/email/locators/CommonLocators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/locators/MainLocators.java" afterPath="$PROJECT_DIR$/src/main/java/email/locators/MainLocators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java" afterPath="$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/pages/AbstractPage.java" afterPath="$PROJECT_DIR$/src/main/java/email/pages/AbstractPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/pages/LandingPage.java" afterPath="$PROJECT_DIR$/src/main/java/email/pages/LandingPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/pages/MainPage.java" afterPath="$PROJECT_DIR$/src/main/java/email/pages/MainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/email/blocks/AuthFormOnMainPageBlockTest.java" afterPath="$PROJECT_DIR$/src/test/java/email/blocks/AuthFormOnMainPageBlockTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/email/utils/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/email/utils/Utils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java" afterPath="$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/email/cases/SignInTest.java" afterPath="$PROJECT_DIR$/src/test/java/email/cases/SignInTest.java" />
     </list>
@@ -61,117 +70,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SignInTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/EmailTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateEmailFormPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/CreateEmailFormPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateEmailFormPageLocators.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/CreateEmailFormPageLocators.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignInTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/SignInTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignInSimplePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInSimplePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignInSimpleLocators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInSimpleLocators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="245">
+              <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/AbstractPage.java">
+      <file leaf-file-name="SentEmailFormPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SentEmailFormPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignInBlock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java">
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/utils/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
-                <element signature="e#1493#1494#0" expanded="true" />
-                <element signature="e#1541#1542#0" expanded="true" />
-                <element signature="e#1608#1609#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractBlock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assume.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assume.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+            <state relative-caret-position="120">
+              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignInPromoPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInPromoPage.java">
+      <file leaf-file-name="AbstractTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LandingPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/LandingPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="860">
+              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignInPromoLocators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInPromoLocators.java">
+      <file leaf-file-name="MailBoxPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/MailBoxPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="172" />
+            <state relative-caret-position="546">
+              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignInPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailSentPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/EmailSentPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -193,24 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/email/constants/SignInConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/data/Credentials.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/utils/SettingsProperties.java" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
-        <option value="$PROJECT_DIR$/src/test/java/email/cases/SetUp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/OpenSignInPage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/settings.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/email/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/data/Users.java" />
-        <option value="$PROJECT_DIR$/signInTests.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/email/blocks/AuthFormOnMainPageBlockTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/elements/AbstractElement.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/email/blocks/AuthFormOnMainPageBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/AuthorizationPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/locators/LandingLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/AlbumPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/email/cases/GetPhotos.java" />
         <option value="$PROJECT_DIR$/src/test/java/email/cases/GetPhotosTset.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/pages/AlbumLoginPage.java" />
@@ -219,24 +196,49 @@
         <option value="$PROJECT_DIR$/src/main/java/email/pages/PhotoPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/pages/OpenPhotoLoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/email/cases/GetPhotosTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/locators/AuthorizationLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/MainPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/pages/OpenMainPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/AbstractPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/pages/LandingPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/locators/SignInPromoLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/locators/SignInLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/locators/MainLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/locators/CommonLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/SignInPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/locators/SignInSimpleLocators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/pages/SignInPromoPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/email/pages/SignInSimplePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/DynUsers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/DynUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/StatUsers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/MainLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/MainPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/NextRegPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/RegLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/RegPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/DataProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/TestDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/SignInPromoPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/SignInLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/UserCreds.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/CommonLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/AbstractPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/EmailDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/EmailSentLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/data/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/blocks/MailHomePaneBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/MailHomePaneBlockLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/SentEmailFormPageLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/MailBoxLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/SignInPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/EmailSentPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/email/cases/SignInTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/email/cases/CreateEmailTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/email/cases/SendReceiveEmailTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/MailBoxPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/SentEmailFormPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/email/cases/EmailTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/locators/CreateEmailFormPageLocators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/email/pages/CreateEmailFormPage.java" />
       </list>
     </option>
   </component>
@@ -283,8 +285,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -589,7 +590,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,94 +611,22 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="email.cases" />
       <recent name="email.locators" />
       <recent name="email.pages" />
-      <recent name="email.cases" />
+      <recent name="email.data" />
+      <recent name="email.blocks" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SignInTest.tryToSignInWithWrongPassword">
-    <configuration default="false" name="SignInTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.EmailTest.validateDraftEmail">
+    <configuration default="false" name="CreateEmailTest.createAndSaveDraft" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MailRu" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="email.cases" />
-      <option name="MAIN_CLASS_NAME" value="email.cases.SignInTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="GetPhotosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MailRu" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="email.cases" />
-      <option name="MAIN_CLASS_NAME" value="email.cases.GetPhotosTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GetPhotosTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MailRu" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="email.cases" />
-      <option name="MAIN_CLASS_NAME" value="email.cases.GetPhotosTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="SignInTest.tryToSignInWithWrongPassword" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MailRu" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="email.cases" />
-      <option name="MAIN_CLASS_NAME" value="email.cases.SignInTest" />
-      <option name="METHOD_NAME" value="tryToSignInWithWrongPassword" />
+      <option name="MAIN_CLASS_NAME" value="email.cases.CreateEmailTest" />
+      <option name="METHOD_NAME" value="createAndSaveDraft" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -716,14 +646,95 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="SignInTest.successfulSignIn" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CreateEmailTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MailRu" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="email.cases" />
-      <option name="MAIN_CLASS_NAME" value="email.cases.SignInTest" />
-      <option name="METHOD_NAME" value="successfulSignIn" />
+      <option name="MAIN_CLASS_NAME" value="email.cases.CreateEmailTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="CreateEmailTest.createSendThenCheckSent" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MailRu" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="email.cases" />
+      <option name="MAIN_CLASS_NAME" value="email.cases.CreateEmailTest" />
+      <option name="METHOD_NAME" value="createSendThenCheckSent" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="CreateEmailTest.validateSentEmail" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MailRu" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="email.cases" />
+      <option name="MAIN_CLASS_NAME" value="email.cases.CreateEmailTest" />
+      <option name="METHOD_NAME" value="validateSentEmail" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmailTest.validateDraftEmail" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MailRu" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="email.cases" />
+      <option name="MAIN_CLASS_NAME" value="email.cases.EmailTest" />
+      <option name="METHOD_NAME" value="validateDraftEmail" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -916,19 +927,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.SignInTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GetPhotosTest" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.GetPhotosTest" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.SignInTest.tryToSignInWithWrongPassword" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.SignInTest.successfulSignIn" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.CreateEmailTest.createAndSaveDraft" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.CreateEmailTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.CreateEmailTest.createSendThenCheckSent" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.CreateEmailTest.validateSentEmail" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.EmailTest.validateDraftEmail" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.SignInTest.tryToSignInWithWrongPassword" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.SignInTest.successfulSignIn" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.SignInTest" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.GetPhotosTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GetPhotosTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.EmailTest.validateDraftEmail" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.CreateEmailTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.CreateEmailTest.validateSentEmail" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.CreateEmailTest.createSendThenCheckSent" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.CreateEmailTest.createAndSaveDraft" />
       </list>
     </recent_temporary>
   </component>
@@ -946,35 +957,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GetPhotosTest - 2017.01.12 at 12h 31m 16s.xml">
-      <configuration name="GetPhotosTest" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest - 2017.07.05 at 19h 52m 42s.xml">
+      <configuration name="CreateEmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GetPhotosTest - 2017.01.12 at 12h 33m 53s.xml">
-      <configuration name="GetPhotosTest" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest_createAndSend - 2017.07.05 at 18h 05m 32s.xml">
+      <configuration name="CreateEmailTest.createAndSend" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest - 2017.06.22 at 15h 23m 53s.xml">
-      <configuration name="SignInTest" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest_createAndSend - 2017.07.05 at 18h 55m 42s.xml">
+      <configuration name="CreateEmailTest.createAndSend" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest - 2017.06.22 at 17h 36m 43s.xml">
-      <configuration name="SignInTest" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest_createAndSend - 2017.07.05 at 19h 12m 23s.xml">
+      <configuration name="CreateEmailTest.createAndSend" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest - 2017.06.22 at 18h 43m 13s.xml">
-      <configuration name="SignInTest" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest_createAndSend - 2017.07.05 at 19h 15m 22s.xml">
+      <configuration name="CreateEmailTest.createAndSend" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest_successfulSignIn - 2017.06.22 at 17h 51m 11s.xml">
-      <configuration name="SignInTest.successfulSignIn" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest_createAndSend - 2017.07.05 at 19h 16m 04s.xml">
+      <configuration name="CreateEmailTest.createAndSend" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest_successfulSignIn - 2017.06.22 at 18h 12m 41s.xml">
-      <configuration name="SignInTest.successfulSignIn" configurationId="TestNG" />
+    <history-entry file="CreateEmailTest_validateSentEmail - 2017.07.05 at 19h 45m 42s.xml">
+      <configuration name="CreateEmailTest.validateSentEmail" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest_successfulSignIn - 2017.06.22 at 19h 49m 51s.xml">
-      <configuration name="SignInTest.successfulSignIn" configurationId="TestNG" />
+    <history-entry file="EmailTest_validateDraftEmail - 2017.07.05 at 20h 06m 48s.xml">
+      <configuration name="EmailTest.validateDraftEmail" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest_tryToSignInWithWrongPassword - 2017.06.22 at 15h 31m 30s.xml">
-      <configuration name="SignInTest.tryToSignInWithWrongPassword" configurationId="TestNG" />
+    <history-entry file="EmailTest_validateDraftEmail - 2017.07.05 at 20h 39m 01s.xml">
+      <configuration name="EmailTest.validateDraftEmail" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SignInTest_tryToSignInWithWrongPassword - 2017.06.22 at 20h 08m 15s.xml">
-      <configuration name="SignInTest.tryToSignInWithWrongPassword" configurationId="TestNG" />
+    <history-entry file="EmailTest_validateDraftEmail - 2017.07.05 at 20h 43m 53s.xml">
+      <configuration name="EmailTest.validateDraftEmail" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -988,10 +999,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4496208" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30444205" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30444205" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19083156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1001,7 +1013,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1045,115 +1056,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/Credentials.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="759" column="0" selection-start-line="759" selection-start-column="0" selection-end-line="759" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/3.0.1/selenium-firefox-driver-3.0.1.jar!/org/openqa/selenium/firefox/FirefoxDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/SetUp.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.35.0/selenium-api-2.35.0.jar!/org/openqa/selenium/WebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.35.0/selenium-support-2.35.0.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/elements/AbstractElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/AuthFormOnMainPageBlock.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/email/blocks/AuthFormOnMainPageBlockTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="496" column="0" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/spi/DefaultRepositorySelector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/LogManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/CategoryKey.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1216,14 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
@@ -1233,14 +1127,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/AlbumPage.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/email/utils/SettingsProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1251,152 +1137,300 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/OpenMainPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInSimpleLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assume.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <caret line="14" column="91" selection-start-line="14" selection-start-column="91" selection-end-line="14" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/StatUsers.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInSimplePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#647#648#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/MainPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="260">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/LandingLocators.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="77" />
-          <folding />
+        <state relative-caret-position="280">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/MainLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="8" column="123" selection-start-line="8" selection-start-column="123" selection-end-line="8" selection-end-column="123" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInBlockLocators.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/RegLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
-          <folding />
+        <state relative-caret-position="680">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/NextRegPage.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/TestDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/RegPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/CommonLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="6" column="100" selection-start-line="6" selection-start-column="100" selection-end-line="6" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInPromoLocators.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="172" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/LandingPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/EmailDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInPromoPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        <state relative-caret-position="195">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assume.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/EmailSentLocators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        <state relative-caret-position="120">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1393#1394#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/MailHomePaneBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SentEmailFormPageLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="118" selection-start-line="10" selection-start-column="118" selection-end-line="10" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/OpenMainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/data/UserCreds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/MailHomePaneBlockLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/MailBoxLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="163" selection-start-line="6" selection-start-column="163" selection-end-line="6" selection-end-column="163" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/AbstractPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="213" column="38" selection-start-line="213" selection-start-column="16" selection-end-line="213" selection-end-column="38" />
+          <folding>
+            <element signature="e#5570#5571#0" expanded="true" />
+            <element signature="e#5624#5625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/AbstractBlock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/SignInSimpleLocators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        <state relative-caret-position="120">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/blocks/SignInBlock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/EmailSentPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SignInSimplePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/SignInTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="245">
+          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/AbstractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/CreateEmailTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/MailBoxPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/locators/CreateEmailFormPageLocators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/SentEmailFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/email/pages/CreateEmailFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/email/cases/EmailTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

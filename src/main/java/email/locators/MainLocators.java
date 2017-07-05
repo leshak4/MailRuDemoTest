@@ -6,4 +6,5 @@ public class MainLocators {
 
     public static final String MAIN_SEARCH_LINE_INPUT = "//input[@id='q']";
 
+    public static final String MAIN_REGISTRATION_LINK = "//*[@id='mailbox__register']/a[@class='mailbox__register__link']";
 }

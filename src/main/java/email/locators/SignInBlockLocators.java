@@ -10,4 +10,8 @@ public class SignInBlockLocators {
 
     public static final String SIGNIN_BLOCK_ENTER_BUTTON = "//button/span[text()='Войти']";
 
+    public static final String SIGNIN_BLOCK_DROPDOWN_ARROW_WE = "//*[@class='b-dropdown__arrow']";
+
+    public static String SIGNIN_BLOCK_DROPDOWN_DOMAIN_LINK = "//a/span[text()='{domainName}']";
+
 }

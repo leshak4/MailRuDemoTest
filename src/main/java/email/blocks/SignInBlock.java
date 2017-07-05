@@ -1,6 +1,5 @@
 package email.blocks;
 
-
 import email.data.Users;
 import email.locators.CommonLocators;
 import email.locators.SignInBlockLocators;
@@ -27,12 +26,21 @@ public class SignInBlock extends AbstractBlock {
     @FindBy(xpath = SignInBlockLocators.SIGNIN_BLOCK_WRONG_CRED_MSG_STR)
     private WebElement signInBlockWrongCredMsgStr;
 
+    @FindBy(xpath = SignInBlockLocators.SIGNIN_BLOCK_DROPDOWN_ARROW_WE)
+    private WebElement signInBlockDDArrowWe;
+
     public void fillLoginForm(final Users user) {
         signInBlockUsernameInput.clear();
         signInBlockUsernameInput.sendKeys(user.getUsername());
         signInBlockPasswordInput.clear();
         signInBlockPasswordInput.sendKeys(user.getPassword());
-        // ddDomain.selectByValue(user.getDomain());
+
+        signInBlockDDArrowWe.click();
+
+        final String domainXPath = SignInBlockLocators.SIGNIN_BLOCK_DROPDOWN_DOMAIN_LINK.replace("{domainName}", user.getDomain());
+        WebElement domainItemLink = findByXpath(domainXPath);
+        domainItemLink.click();
+
         signInBlockEnterButton.click();
     }
 

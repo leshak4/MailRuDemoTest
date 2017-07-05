@@ -18,14 +18,22 @@ public class MainPage extends AbstractPage {
     @FindBy(xpath = MainLocators.MAIN_SEARCH_LINE_INPUT)
     private TextInput mainSearchLineInput;
 
+    @FindBy(xpath = MainLocators.MAIN_REGISTRATION_LINK)
+    private Link mainRegistrationLink;
+
     public MainPage(final WebDriver driver) {
         super(driver);
         waitForPageToLoadAndVerifyBy(By.xpath(MainLocators.MAIN_SEARCH_LINE_INPUT));
     }
 
-    public SignInPromoPage openSignInPage() {
+    public SignInPage openSignInPage() {
         mainBreadCrumbPostLink.click();
-        return new SignInPromoPage(getDriver());
+        return new SignInPage(getDriver());
+    }
+
+    public RegPage openRegPage() {
+        mainRegistrationLink.click();
+        return new RegPage(getDriver());
     }
 
 }
