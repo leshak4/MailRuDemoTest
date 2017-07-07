@@ -36,7 +36,9 @@ public class SignInPage extends AbstractPage {
         super(driver);
         waitForPageToLoadAndVerifyBy(By.xpath(SignInLocators.SIGNIN_CREDS_FRAME));
         switchToFrame(signInCredsFrame);
+        waitForPageToLoadAndVerifyBy(By.xpath(SignInLocators.SIGNIN_USERNAME_INPUT));
         waitForPageToLoadAndVerifyBy(By.xpath(SignInLocators.SIGNIN_PASSWORD_INPUT));
+        sleep(300);
         switchToDefaultContent();
     }
 

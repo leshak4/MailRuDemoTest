@@ -1,6 +1,6 @@
 package email.pages;
 
-import email.blocks.MailHomePaneBlock;
+import email.blocks.MailFoldersBlock;
 import email.locators.EmailSentLocators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class EmailSentPage extends AbstractPage {
 
-    private MailHomePaneBlock mailHomePaneBlock;
+    private MailFoldersBlock mailFoldersBlock;
 
     @FindBy(xpath = EmailSentLocators.EMAILSENT_CONFIRMATION)
     private WebElement emailSentConfirmation;
@@ -31,7 +31,7 @@ public class EmailSentPage extends AbstractPage {
     }
 
     public MailBoxPage openSent() {
-        mailHomePaneBlock.openSent();
+        mailFoldersBlock.openSent();
         return new MailBoxPage(getDriver());
     }
 

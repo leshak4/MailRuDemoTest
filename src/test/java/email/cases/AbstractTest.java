@@ -45,27 +45,15 @@ public abstract class AbstractTest {
     }
 
     public void logTestHeader(final String text) {
-        StringBuffer header = new StringBuffer(text);
-        log.info("");
-        log.info("************************************************************");
-        int len = header.length();
         int aim = 64;
-        while (len > 0) {
-            if (len > 64) {
-                final String temp = header.substring(0, aim);
-                log.info("* " + temp + " *");
-                header = header.delete(0, aim);
-                len = header.length();
-            } else {
-                final StringBuffer temp = header;
-                while (temp.length() < aim) {
-                    temp.append(' ');
-                }
-                log.info("* " + temp + " *");
-                len = 0;
-            }
+        String line = "";
+        log.info("");
+        for (int i = 0; i <= aim; i ++) {
+            line = line + "*";
         }
-        log.info("************************************************************");
+        log.info(line);
+        log.info(text);
+        log.info(line);
     }
 
     public static String generateEmailString(Users user) {

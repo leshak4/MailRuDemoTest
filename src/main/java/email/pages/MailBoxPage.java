@@ -1,5 +1,8 @@
 package email.pages;
 
+import email.blocks.FooterBlock;
+import email.blocks.LanguageSwitcherBlock;
+import email.blocks.MailFoldersBlock;
 import email.blocks.MailHomePaneBlock;
 import email.data.EmailDetails;
 import email.data.Users;
@@ -16,6 +19,12 @@ public class MailBoxPage extends AbstractPage {
     private final Logger log = Logger.getLogger(this.getClass());
 
     private MailHomePaneBlock mailHomePaneBlock;
+
+    private FooterBlock footerBlock;
+
+    private LanguageSwitcherBlock languageSwitcherBlock;
+
+    private MailFoldersBlock mailFoldersBlock;
 
     @FindBy(id = MailBoxLocators.MAILBOX_LOGGED_USER_EMAIL_LINK)
     private Link mailboxLoggedEmailLink;
@@ -34,37 +43,51 @@ public class MailBoxPage extends AbstractPage {
         return new CreateEmailFormPage(getDriver());
     }
 
-    public WebElement getEmailDisplayedInList(Users userTo, EmailDetails emailDetails) {
-        String emailTo = userTo.getUsername() + userTo.getDomain();
-        String emailSubj = emailDetails.getSubject();
-        String emailItemXpath = MailBoxLocators.MAILBOX_EMAIL_ITEM_LINK.replace("{email}", emailTo).replace("{subject}", emailSubj);
+    public WebElement getEmailDisplayedInList(EmailDetails emailDetails) {
+        String emailItemXpath = MailBoxLocators.MAILBOX_EMAIL_ITEM_LINK.replace("{subject}", emailDetails.getSubject());
         WebElement emailItemLink = findByXpath(emailItemXpath);
         return emailItemLink;
     }
 
-    public boolean isEmailDisplayedInList(Users userTo, EmailDetails emailDetails) {
-        return getEmailDisplayedInList(userTo, emailDetails).isDisplayed();
+    public boolean isEmailDisplayedInList(EmailDetails emailDetails) {
+        return getEmailDisplayedInList(emailDetails).isDisplayed();
     }
 
     public SentEmailFormPage openSentEmail(Users userTo, EmailDetails emailDetails) {
-        getEmailDisplayedInList(userTo, emailDetails).click();
+        getEmailDisplayedInList(emailDetails).click();
         return new SentEmailFormPage(getDriver());
     }
 
     public CreateEmailFormPage openDraftEmail(Users userTo, EmailDetails emailDetails) {
-        getEmailDisplayedInList(userTo, emailDetails).click();
+        getEmailDisplayedInList(emailDetails).click();
         return new CreateEmailFormPage(getDriver());
     }
 
+    public SentEmailFormPage openReceivedEmail(Users userFrom, EmailDetails emailDetails) {
+        getEmailDisplayedInList(emailDetails).click();
+        return new SentEmailFormPage(getDriver());
+    }
+
     public MailBoxPage openSent() {
-        mailHomePaneBlock.openSent();
+        mailFoldersBlock.openSent();
         return new MailBoxPage(getDriver());
     }
 
     public MailBoxPage openDrafts() {
-        mailHomePaneBlock.openDrafts();
+        mailFoldersBlock.openDrafts();
         return new MailBoxPage(getDriver());
     }
 
+    public MailBoxPage openInbox() {
+        mailFoldersBlock.openInbox();
+        return new MailBoxPage(getDriver());
+    }
+
+    public MailBoxPage switchToEnglish() {
+        footerBlock.openLanguageSwitcher();
+        waitUntilDisplayed(languageSwitcherBlock);
+        languageSwitcherBlock.selectEnglish();
+        return new MailBoxPage(getDriver());
+    }
 
 }

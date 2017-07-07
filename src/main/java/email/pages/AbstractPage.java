@@ -128,6 +128,17 @@ public abstract class AbstractPage {
         }
     }
 
+    public boolean isElementPresent(final WebElement element, String descr) {
+        try {
+            waitUntilDisplayed(element, DEFAULT_TIMEOUT, false);
+            log.info(descr + " is displayed");
+            return true;
+        } catch (final TimeoutException e) {
+            log.info(descr + " is NOT displayed");
+            return false;
+        }
+    }
+
     public void waitUntilNotDisplayed(final By locator) {
         new WebDriverWait(driver, DEFAULT_TIMEOUT).until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
@@ -136,9 +147,9 @@ public abstract class AbstractPage {
         new WebDriverWait(driver, timeout).until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
-    public void sleep(final long seconds) {
+    public void sleep(final long msec) {
         try {
-            Thread.sleep(seconds * 1000);
+            Thread.sleep(msec);
         } catch (final InterruptedException e) {
             fail(e.getMessage());
         }
@@ -193,7 +204,7 @@ public abstract class AbstractPage {
 
     @Step
     public boolean waitForPageToLoadAndVerifyWe(final WebElement pageIdentifier) {
-        final String pageName = this.getClass().getName().replace("Page", "");
+        final String pageName = this.getClass().getName().replace("Page", "").replace("email.pages.", "");
         log.info("Waiting for " + pageName + " page to load");
         if (isElementPresent(pageIdentifier, DEFAULT_TIMEOUT)) {
             log.info(pageName + " page is opened.");
