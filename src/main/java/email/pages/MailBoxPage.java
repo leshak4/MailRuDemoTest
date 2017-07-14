@@ -27,7 +27,16 @@ public class MailBoxPage extends AbstractPage {
     private MailFoldersBlock mailFoldersBlock;
 
     @FindBy(id = MailBoxLocators.MAILBOX_LOGGED_USER_EMAIL_LINK)
-    private Link mailboxLoggedEmailLink;
+    private WebElement mailboxLoggedEmailLink;
+
+    @FindBy(xpath = MailBoxLocators.MAILBOX_LOGOUT_LINK)
+    private Link mailboxLogoutLink;
+
+    @FindBy(xpath = MailBoxLocators.MAILBOX_EMPTY_INDICATOR)
+    private WebElement mailboxEmptyIndicator;
+
+    @FindBy(xpath = MailBoxLocators.MAILBOX_FIRST_EMAIL_ITEM)
+    private WebElement mailboxFirstEmailItem;
 
     public MailBoxPage(WebDriver driver) {
         super(driver);
@@ -38,7 +47,12 @@ public class MailBoxPage extends AbstractPage {
         return mailboxLoggedEmailLink.getText();
     }
 
+    public Boolean isLoggedUserEmailDisplayed() {
+        return isElementPresent(mailboxLoggedEmailLink, "Email of a logged user", 5);
+    }
+
     public CreateEmailFormPage openCreateEmailForm() {
+        log.info("'create email' form opening");
         mailHomePaneBlock.openCreateEmailForm();
         return new CreateEmailFormPage(getDriver());
     }
@@ -54,40 +68,77 @@ public class MailBoxPage extends AbstractPage {
     }
 
     public SentEmailFormPage openSentEmail(Users userTo, EmailDetails emailDetails) {
+        log.info("opening of the sent email");
+        waitUntilDisplayed(mailboxFirstEmailItem, 5);
         getEmailDisplayedInList(emailDetails).click();
         return new SentEmailFormPage(getDriver());
     }
 
     public CreateEmailFormPage openDraftEmail(Users userTo, EmailDetails emailDetails) {
+        log.info("opening of the draft email");
+        waitUntilDisplayed(mailboxFirstEmailItem, 5);
         getEmailDisplayedInList(emailDetails).click();
         return new CreateEmailFormPage(getDriver());
     }
 
     public SentEmailFormPage openReceivedEmail(Users userFrom, EmailDetails emailDetails) {
+        log.info("opening of the received email");
+        waitUntilDisplayed(mailboxFirstEmailItem, 5);
         getEmailDisplayedInList(emailDetails).click();
         return new SentEmailFormPage(getDriver());
     }
 
     public MailBoxPage openSent() {
+        log.info("sent emails folder opening");
+        waitUntilDisplayed(mailFoldersBlock, 5);
         mailFoldersBlock.openSent();
         return new MailBoxPage(getDriver());
     }
 
     public MailBoxPage openDrafts() {
+        log.info("draft emails folder opening");
+        waitUntilDisplayed(mailFoldersBlock, 5);
         mailFoldersBlock.openDrafts();
         return new MailBoxPage(getDriver());
     }
 
     public MailBoxPage openInbox() {
+        log.info("inbox folder opening");
+        waitUntilDisplayed(mailFoldersBlock, 5);
         mailFoldersBlock.openInbox();
         return new MailBoxPage(getDriver());
     }
 
     public MailBoxPage switchToEnglish() {
+        log.info("switching to English version");
         footerBlock.openLanguageSwitcher();
         waitUntilDisplayed(languageSwitcherBlock);
         languageSwitcherBlock.selectEnglish();
         return new MailBoxPage(getDriver());
+    }
+
+    public MainPage logout() {
+        log.info("logging out");
+        mailboxLogoutLink.click();
+        return new MainPage(getDriver());
+    }
+
+    public String checkMailBoxFolderEmpty() {
+        String isMailBoxFolderEmpty = "not sure";
+        boolean isEmptyBoxIconPresented = isElementPresent(mailboxEmptyIndicator, "empty box indicator", 3);
+        boolean isFirstEmailItemPresented = isElementPresent(mailboxFirstEmailItem, "first email", 3);
+        if (isEmptyBoxIconPresented & !isFirstEmailItemPresented) {
+            log.info("mailbox folder is empty");
+            isMailBoxFolderEmpty = "yes";
+        }
+        else if (!isEmptyBoxIconPresented & isFirstEmailItemPresented) {
+            log.info("mailbox folder is not empty");
+            isMailBoxFolderEmpty = "no";
+        }
+        else {
+            log.info("something is wrong");
+        }
+        return isMailBoxFolderEmpty;
     }
 
 }

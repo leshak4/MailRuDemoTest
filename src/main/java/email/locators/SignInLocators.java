@@ -2,7 +2,7 @@ package email.locators;
 
 public class SignInLocators {
 
-    public static final String SIGNIN_WRONG_CRED_MSG_STR = "//*[@id='frame']//div[@class='b-login__errors'][contains(text(), 'Неверное имя пользователя или пароль')]";
+    public static final String SIGNIN_WRONG_CRED_MSG_STR = "//*[@id='frame']//div[@class='b-login__errors']";
 
     public static final String SIGNIN_USERNAME_INPUT = "//input[@name='Username']";
 

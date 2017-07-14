@@ -6,6 +6,7 @@ import email.data.EmailDetails;
 import email.data.Users;
 import email.locators.CreateEmailFormPageLocators;
 import email.utils.Utils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,8 @@ import ru.yandex.qatools.htmlelements.element.Link;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class CreateEmailFormPage extends AbstractPage {
+
+    private final Logger log = Logger.getLogger(this.getClass());
 
     private MailHomePaneBlock mailHomePaneBlock;
 
@@ -75,6 +78,7 @@ public class CreateEmailFormPage extends AbstractPage {
     }
 
     public void composeEmail(Users user, EmailDetails emailDetails) {
+        log.info("email composing");
         createEmailFormToInput.sendKeys(Users.getEmail(user));
         createEmailFormSubjInput.sendKeys(emailDetails.getSubject());
         switchToFrame(createEmailFormBodyFrame);
@@ -90,16 +94,19 @@ public class CreateEmailFormPage extends AbstractPage {
     }
 
     public void saveAsDraft() {
+        log.info("saving as draft");
         createEmailFormSaveDraftButton.click();
         waitForPageToLoadAndVerifyBy(By.xpath(CreateEmailFormPageLocators.CREATEEMAILFORM_DRAFTTIME_TEXT));
     }
 
     public MailBoxPage openDrafts() {
+        log.info("draft emails folder opening");
         mailFoldersBlock.openDrafts();
         return new MailBoxPage(getDriver());
     }
 
     public EmailSentPage sendEmail() {
+        log.info("email sending");
         createEmailFormSendButton.click();
         return new EmailSentPage(getDriver());
     }
@@ -123,7 +130,7 @@ public class CreateEmailFormPage extends AbstractPage {
 
         if (emailDetails.getAttachment().trim().length() > 0) {
             isEmailFormDataCorrect = isEmailFormDataCorrect &
-                    isElementPresent(createEmailFormAttachedFilePreview, "attachment preview");
+                    isElementPresent(createEmailFormAttachedFilePreview, "attachment preview", 5);
 
             Utils.mouseOver(createEmailFormAttachedFilePreview, getDriver());
 

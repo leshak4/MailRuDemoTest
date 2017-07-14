@@ -128,9 +128,9 @@ public abstract class AbstractPage {
         }
     }
 
-    public boolean isElementPresent(final WebElement element, String descr) {
+    public boolean isElementPresent(final WebElement element, String descr, final int timeout) {
         try {
-            waitUntilDisplayed(element, DEFAULT_TIMEOUT, false);
+            waitUntilDisplayed(element, timeout, false);
             log.info(descr + " is displayed");
             return true;
         } catch (final TimeoutException e) {
@@ -185,9 +185,6 @@ public abstract class AbstractPage {
 
     /**
      * Verify page content
-     *
-     * @param pageIdentifier must be an element that 100% exist on this page and doesn't exist on others
-     * @return if page is correct
      */
     @Step
     public boolean waitForPageToLoadAndVerifyBy(final By pageIdentifier) {

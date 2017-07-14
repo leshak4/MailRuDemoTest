@@ -9,6 +9,8 @@ public abstract class AbstractBlock extends HtmlElement {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+    private static final int DEFAULT_TIMEOUT = 10;
+
     public boolean isElementPresent(WebElement element) {
         if (element.isDisplayed()) {
             return true;

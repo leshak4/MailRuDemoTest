@@ -14,28 +14,28 @@ public class EmailTest extends AbstractTest{
 
     private final Logger log = Logger.getLogger(this.getClass());
 
-    @Test(groups = { "signIn", "positive" },
+    @Test(groups = { "login", "positive" },
             dataProvider = "getActiveUser",
             dataProviderClass = TestDataProvider.class)
     public void successfulSignIn(Users user) {
-        logTestHeader("TC-P01: SignIn page: Valid login and password");
+        logTestHeader("TC-P01: Log in with valid username and password");
 
         MainPage mainPage = openMainPage();
         SignInPage signInPage = mainPage.openSignInPage();
-        MailBoxPage landing = signInPage.signIn(user);
+        MailBoxPage mailBoxPage = signInPage.signIn(user);
 
-        String expectedEmail = generateEmailString(user);
+        String expectedEmail = Users.getEmail(user);
         String descr = "Email of a logged user [" + expectedEmail + "]";
         log.info("Check " + descr + " is displayed");
         assertThat(descr,
-                landing.getLoggedEmailText(),
+                mailBoxPage.getLoggedEmailText(),
                 equalToIgnoringCase(expectedEmail));
         log.info("--PASSED--");
     }
 
-    @Test(groups = { "signIn", "negative" } )
+    @Test(groups = { "login", "negative" } )
     public void tryToSignInWithWrongPassword() {
-        logTestHeader("TC-N01: SignIn page: Invalid password");
+        logTestHeader("TC-N01: Try to login with invalid password");
 
         Users user = Users.getWrongUser();
         MainPage mainPage = openMainPage();
@@ -44,17 +44,17 @@ public class EmailTest extends AbstractTest{
         String descr = "Error message about wrong username/password";
         log.info("Check " + descr + " is displayed");
         assertTrue(descr, signInSimplePage.isWrongCredMsgDisplayed());
+
+        descr = "sign in area";
+        log.info("Check " + descr + " is displayed");
+        assertTrue(descr, signInSimplePage.isSignInAreaDisplayed());
+
         log.info("--PASSED--");
-    }
-
-    @Test(groups = { "signIn", "positive" } )
-    public void logout() {
-
     }
 
     @Test(groups = { "createEmail", "positive" } )
     public void createAndSaveDraft() {
-        logTestHeader("TC-P03: Create Email page: Create and save an email as draft");
+        logTestHeader("TC-P03: Create and save an email as draft");
 
         Users userFrom = Users.getFirstUser();
         Users userTo = Users.getSecondUser();
@@ -65,7 +65,6 @@ public class EmailTest extends AbstractTest{
         MailBoxPage mailBoxPage = signInPage.signIn(userFrom);
 
         CreateEmailFormPage createEmailFormPage = mailBoxPage.openCreateEmailForm();
-
         createEmailFormPage.composeEmail(userTo, emailDetails);
         createEmailFormPage.saveAsDraft();
 
@@ -78,9 +77,9 @@ public class EmailTest extends AbstractTest{
         log.info("--PASSED--");
     }
 
-    @Test(dependsOnMethods = { "createAndSaveDraft" }, groups = { "createEmail", "positive" } )
+    @Test(groups = { "createEmail", "positive" } )
     public void validateDraftEmail() {
-        logTestHeader("TC-P04: Draft Email page: validate details of saved previously email");
+        logTestHeader("TC-P04: Validate details of previously saved email");
 
         Users userFrom = Users.getFirstUser();
         Users userTo = Users.getSecondUser();
@@ -88,8 +87,17 @@ public class EmailTest extends AbstractTest{
 
         MainPage mainPage = openMainPage();
         SignInPage signInPage = mainPage.openSignInPage();
-        MailBoxPage mailBoxPage = signInPage.signIn(userFrom).openDrafts().switchToEnglish();
-        CreateEmailFormPage createEmailFormPage = mailBoxPage.openDraftEmail(userTo, emailDetails);
+        MailBoxPage mailBoxPage = signInPage.signIn(userFrom);
+
+        CreateEmailFormPage createEmailFormPage = mailBoxPage.openCreateEmailForm();
+        createEmailFormPage.composeEmail(userTo, emailDetails);
+        createEmailFormPage.saveAsDraft();
+        mailBoxPage = createEmailFormPage.openDrafts();
+
+        mainPage = mailBoxPage.logout();
+        signInPage = mainPage.openSignInPage();
+        mailBoxPage = signInPage.signIn(userFrom).openDrafts().switchToEnglish();
+        createEmailFormPage = mailBoxPage.openDraftEmail(userTo, emailDetails);
 
         String descr = "draft email details";
         log.info("Check that " + descr + " are valid");
@@ -98,16 +106,49 @@ public class EmailTest extends AbstractTest{
         log.info("--PASSED--");
     }
 
-    @Test(dependsOnMethods = { "createAndSaveDraft" }, groups = { "createEmail", "positive" } )
+    @Test(groups = { "sendEmail", "positive"} )
     public void sendEmailFromDraft() {
-        logTestHeader("TC-P05: Draft Email page: send drafted email");
+        logTestHeader("TC-P05: Send previously saved as draft email");
+
+        Users userFrom = Users.getSecondUser();
+        Users userTo = Users.getFirstUser();
+        EmailDetails emailDetails = EmailDetails.getSecondEmailDetails();
+
+        MainPage mainPage = openMainPage();
+        SignInPage signInPage = mainPage.openSignInPage();
+        MailBoxPage mailBoxPage = signInPage.signIn(userFrom);
+
+        CreateEmailFormPage createEmailFormPage = mailBoxPage.openCreateEmailForm();
+        createEmailFormPage.composeEmail(userTo, emailDetails);
+        createEmailFormPage.saveAsDraft();
+        mailBoxPage = createEmailFormPage.openDrafts();
+
+        mainPage = mailBoxPage.logout();
+        signInPage = mainPage.openSignInPage();
+        mailBoxPage = signInPage.signIn(userFrom).openDrafts();
+        createEmailFormPage = mailBoxPage.openDraftEmail(userTo, emailDetails);
+        EmailSentPage emailSentPage = createEmailFormPage.sendEmail();
+
+        String descr = "Confirmation that email is sent";
+        log.info("Check that " + descr + " is displayed");
+        assertTrue(descr, emailSentPage.isEmailSentConfirmationDisplayed());
+
+        descr = "email address";
+        log.info("Check that " + descr + " is displayed");
+        assertEquals(Users.getEmail(userTo), emailSentPage.getDisplayedEmailTo());
+
+        mailBoxPage = emailSentPage.openSent();
+
+        descr = "the email in the 'sent' folder";
+        log.info("Check that " + descr + " is displayed");
+        assertTrue(descr, mailBoxPage.isEmailDisplayedInList(emailDetails));
 
         log.info("--PASSED--");
     }
 
     @Test(groups = { "createEmail", "sendEmail", "positive" } )
     public void createAndSendEmail() {
-        logTestHeader("TC-P06: Create Email page: Create and send an email");
+        logTestHeader("TC-P06: Create and send an email");
 
         Users userFrom = Users.getSecondUser();
         Users userTo = Users.getFirstUser();
@@ -139,9 +180,9 @@ public class EmailTest extends AbstractTest{
         log.info("--PASSED--");
     }
 
-    @Test(dependsOnMethods = { "createAndSendEmail" }, groups = { "createEmail", "sendEmail", "positive" } )
+    @Test(groups = { "sendEmail", "positive" } )
     public void validateSentEmail() {
-        logTestHeader("TC-P07: Sent Email page: validate details of the sent previously email");
+        logTestHeader("TC-P07: Validate details of the sent previously email");
 
         Users userFrom = Users.getSecondUser();
         Users userTo = Users.getFirstUser();
@@ -150,32 +191,63 @@ public class EmailTest extends AbstractTest{
         MainPage mainPage = openMainPage();
         SignInPage signInPage = mainPage.openSignInPage();
         MailBoxPage mailBoxPage = signInPage.signIn(userFrom);
-        mailBoxPage.openSent().switchToEnglish();
 
+        CreateEmailFormPage createEmailFormPage = mailBoxPage.openCreateEmailForm();
+        createEmailFormPage.composeEmail(userTo, emailDetails);
+        EmailSentPage emailSentPage = createEmailFormPage.sendEmail();
+        mailBoxPage = emailSentPage.openSent();
+
+        mainPage = mailBoxPage.logout();
+        signInPage = mainPage.openSignInPage();
+        mailBoxPage = signInPage.signIn(userFrom).openSent().switchToEnglish();
         SentEmailFormPage sentEmailFormPage = mailBoxPage.openSentEmail(userTo, emailDetails);
+
         String descr = "sent email details";
         log.info("Check that " + descr + " are valid");
         assertTrue(descr, sentEmailFormPage.isSentEmailFormDataCorrect(userFrom, userTo, emailDetails));
     }
 
-    @Test(dependsOnMethods = { "createAndSendEmail" }, groups = { "createEmail", "sendEmail", "positive" } )
+    @Test(groups = { "sendEmail", "positive" } )
     public void validateReceivedEmail() {
-        logTestHeader("TC-P08: Inbox Email page: validate details of the received email");
+        logTestHeader("TC-P08: Validate details of the received email");
 
-        Users userFrom = Users.getSecondUser();
-        Users userTo = Users.getFirstUser();
+        Users userFrom = Users.getFirstUser();
+        Users userTo = Users.getSecondUser();
         EmailDetails emailDetails = EmailDetails.getSecondEmailDetails();
 
         MainPage mainPage = openMainPage();
         SignInPage signInPage = mainPage.openSignInPage();
-        MailBoxPage mailBoxPage = signInPage.signIn(userTo);
-        mailBoxPage.openInbox().switchToEnglish();
+        MailBoxPage mailBoxPage = signInPage.signIn(userFrom);
 
+        CreateEmailFormPage createEmailFormPage = mailBoxPage.openCreateEmailForm();
+        createEmailFormPage.composeEmail(userTo, emailDetails);
+        EmailSentPage emailSentPage = createEmailFormPage.sendEmail();
+        mailBoxPage = emailSentPage.openSent();
+
+        mainPage = mailBoxPage.logout();
+        signInPage = mainPage.openSignInPage();
+        mailBoxPage = signInPage.signIn(userTo).openInbox().switchToEnglish();
         SentEmailFormPage sentEmailFormPage = mailBoxPage.openReceivedEmail(userFrom, emailDetails);
+
         String descr = "received email details";
         log.info("Check that " + descr + " are valid");
         assertTrue(descr, sentEmailFormPage.isSentEmailFormDataCorrect(userFrom, userTo, emailDetails));
     }
 
+    @Test(groups = { "login", "positive" },
+            dataProvider = "getActiveUser",
+            dataProviderClass = TestDataProvider.class)
+    public void logout(Users user) {
+        logTestHeader("TC-P09: Logout from personal account page");
 
+        MainPage mainPage = openMainPage();
+        SignInPage signInPage = mainPage.openSignInPage();
+        MailBoxPage mailBoxPage = signInPage.signIn(user);
+
+        mainPage = mailBoxPage.logout();
+
+        String descr = "a logged user email";
+        log.info("Check that " + descr + " is not displayed");
+        assertFalse(descr, mainPage.isLoggedUserEmailDisplayed());
+    }
 }

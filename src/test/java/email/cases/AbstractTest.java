@@ -1,35 +1,33 @@
 package email.cases;
 
-import email.data.Users;
 import email.pages.MainPage;
 import email.pages.OpenMainPage;
 import email.utils.SettingsProperties;
 import email.utils.Utils;
 import org.apache.log4j.Logger;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+
+import java.util.concurrent.TimeUnit;
 
 public abstract class AbstractTest {
 
     protected WebDriver driver;
     private final Logger log = Logger.getLogger(this.getClass());
 
-    @BeforeTest
-    public void beforeRun() throws Exception {
-        Utils.generateSalt();
-        log.info("salt is: " + Utils.getSalt());
-    }
-
     @BeforeMethod
     public void setUp() throws Exception {
         log.info("setting GoogleChrome as a working browser");
         System.setProperty("webdriver.chrome.driver", SettingsProperties.getProperty("pathToChromeDriver"));
-        driver = new ChromeDriver();
-        //driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        Utils.generateSalt();
     }
 
     @AfterMethod
@@ -39,6 +37,7 @@ public abstract class AbstractTest {
         }
     }
 
+    @Test
     public MainPage openMainPage() {
         OpenMainPage openMainPage = new OpenMainPage(driver);
         return openMainPage.openMainPage();
@@ -54,10 +53,6 @@ public abstract class AbstractTest {
         log.info(line);
         log.info(text);
         log.info(line);
-    }
-
-    public static String generateEmailString(Users user) {
-        return user.getUsername() + user.getDomain();
     }
 
 }

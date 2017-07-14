@@ -62,7 +62,7 @@ public class SentEmailFormPage extends AbstractPage {
         if (emailDetails.getAttachment().trim().length() > 0) {
             waitForPageToLoadAndVerifyWe(sentEmailAttachedFilePreview);
             isEmailFormDataCorrect = isEmailFormDataCorrect &
-                    isElementPresent(sentEmailAttachedFilePreview, "attached file preview");
+                    isElementPresent(sentEmailAttachedFilePreview, "attached file preview", 5);
             String attachmentName = sentEmailAttachedFileName.getText() + sentEmailAttachedFileExt.getText();
             isEmailFormDataCorrect = isEmailFormDataCorrect &
                     Utils.checkEquals("attached file name", attachmentName, emailDetails.getAttachment());

@@ -2,7 +2,7 @@ package email.locators;
 
 public class SignInBlockLocators {
 
-    public static final String SIGNIN_BLOCK_WRONG_CRED_MSG_STR = "//div[@class='b-login__errors'][contains(text(), 'Неверное имя пользователя или пароль')]";
+    public static final String SIGNIN_BLOCK_WRONG_CRED_MSG_STR = "//div[@class='b-login__errors']";
 
     public static final String SIGNIN_BLOCK_USERNAME_INPUT = "//input[@name='Username']";
 

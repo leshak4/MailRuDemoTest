@@ -21,5 +21,9 @@ public class SignInSimplePage extends AbstractPage {
         return signInBlock.isWrongCredMsgDisplayed();
     }
 
+    public Boolean isSignInAreaDisplayed() {
+        return signInBlock.isDisplayed();
+    }
+
 
 }

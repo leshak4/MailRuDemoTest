@@ -24,6 +24,7 @@ public class Utils {
         Date d = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMhhmmss");
         salt = dateFormat.format(d);
+        log.info("=== salt is: " + Utils.getSalt());
     }
 
     public static String getSalt() {

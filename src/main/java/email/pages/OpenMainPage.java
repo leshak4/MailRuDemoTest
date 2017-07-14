@@ -16,9 +16,10 @@ public class OpenMainPage extends AbstractPage {
     }
 
     public MainPage openMainPage() {
+        log.info("main page opening");
         getDriver().get(SettingsProperties.getProperty("signIn_URL"));
-        WebElement txtUsername = getDriver().findElement(By.xpath(MainLocators.MAIN_SEARCH_LINE_INPUT));
-        waitForPageToLoadAndVerifyWe(txtUsername);
+        WebElement searchLine = getDriver().findElement(By.xpath(MainLocators.MAIN_SEARCH_LINE_INPUT));
+        waitForPageToLoadAndVerifyWe(searchLine);
         return new MainPage(getDriver());
     }
 }

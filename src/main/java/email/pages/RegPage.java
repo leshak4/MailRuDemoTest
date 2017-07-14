@@ -70,6 +70,7 @@ public class RegPage extends AbstractPage {
     }
 
     public void fillRegistrationForm(Users user, String[] userDetails) {
+        log.info("registration form filling");
         regFirstNameInput.sendKeys(userDetails[0]);
         regLastNameInput.sendKeys(userDetails[1]);
         regBirthDayDD.selectByIndex(Integer.parseInt(userDetails[2]));
